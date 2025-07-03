@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-ingress-configmap
+  namespace: ingress-nginx
+data:
+  proxy-body-size: "10m"  # Максимальный размер тела запроса
+  use-proxy-protocol: "true"  # Включаем PROXY-протокол для передачи исходного IP клиента
